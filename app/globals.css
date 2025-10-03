@@ -36,13 +36,20 @@
 
     --radius: 0.75rem;
 
-    /* Healthcare specific CSS variables */
-    --trust-blue: 214 100% 37%;
-    --healing-green: 160 84% 39%;
-    --professional-navy: 217 32% 17%;
-    --pain-red: 0 79% 63%;
-    --wellness-teal: 188 95% 37%;
-    --recovery-gold: 31 95% 42%;
+    /* Premium color palette */
+    --brand-teal-600: #0BA9B5;
+    --brand-teal-700: #087C86;
+    --leaf-500: #69C36B;
+    --ink-900: #0E1B2A;
+    --slate-700: #32475C;
+    --slate-600: #5A6B7B;
+    --slate-200: #E6EEF1;
+    --mist-50: #F3FAFB;
+    --white: #FFFFFF;
+    --focus-ring: 0 0 0 3px rgba(11,169,181,.35);
+    --card-radius: 16px;
+    --container-max: 1200px;
+    --section-y: clamp(56px, 8vw, 104px);
   }
 
   .dark {
@@ -91,61 +98,97 @@
 }
 
 @layer components {
-  .cta-primary {
-    @apply bg-gradient-to-br from-trust-blue-600 to-trust-blue-700 text-white font-semibold py-4 px-8 rounded-xl border-none cursor-pointer inline-block text-center transition-all duration-300 shadow-trust hover:from-trust-blue-700 hover:to-trust-blue-800 hover:-translate-y-1 hover:shadow-lg uppercase tracking-wide text-lg;
+  .cta-call-now {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-3 bg-brand-teal-600 text-white font-semibold rounded-xl transition-all duration-300 hover:bg-brand-teal-700 hover:shadow-xl hover:-translate-y-1 hover:scale-105 focus:outline-none focus:shadow-[var(--focus-ring)] active:scale-100;
   }
-  
-  .cta-secondary {
-    @apply bg-white text-trust-blue-600 border-2 border-trust-blue-600 font-semibold py-4 px-8 rounded-xl inline-block transition-all duration-300 hover:bg-trust-blue-600 hover:text-white hover:-translate-y-0.5 text-lg;
-  }
-  
+
   .service-card {
-    @apply bg-white rounded-2xl p-8 shadow-soft border border-gray-200 transition-all duration-300 relative overflow-hidden hover:-translate-y-1.5 hover:shadow-medical;
+    @apply bg-white rounded-card p-10 border border-slate-200 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-brand-teal-600/30;
   }
-  
-  .service-card::before {
-    @apply content-[''] absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-healing-green-600 to-wellness-teal-600;
-  }
-  
+
   .testimonial-card {
-    @apply bg-gradient-to-br from-gray-50 to-white rounded-3xl p-10 shadow-medical mb-8 border border-gray-100 relative;
+    @apply bg-white rounded-card p-10 border border-slate-200 shadow-sm mb-6 transition-all duration-300 hover:shadow-lg hover:border-leaf-500/30;
   }
-  
+
   .condition-card {
-    @apply bg-white border-l-4 border-pain-red-600 p-6 rounded-lg shadow-sm mb-4 transition-transform duration-300 hover:translate-x-1 hover:border-healing-green-600 hover:shadow-md;
+    @apply bg-white border-l-4 border-brand-teal-600 p-8 rounded-lg mb-4 shadow-sm transition-all duration-300 hover:translate-x-2 hover:shadow-lg hover:border-leaf-500;
   }
-  
+
   .process-step {
-    @apply text-center p-10 bg-white rounded-2xl shadow-soft mb-8 relative;
+    @apply text-center p-12 bg-white rounded-card border border-slate-200 shadow-sm mb-8 transition-all duration-300 hover:shadow-lg hover:border-brand-teal-600/30;
   }
-  
+
   .stat-card {
-    @apply text-center p-6 bg-gradient-to-br from-trust-blue-600 to-healing-green-600 text-white rounded-xl shadow-trust;
+    @apply text-center p-8 bg-gradient-to-br from-brand-teal-600 to-leaf-500 text-white rounded-card shadow-lg;
   }
-  
+
   .faq-item {
-    @apply bg-white rounded-xl mb-4 shadow-sm border border-gray-200 overflow-hidden;
+    @apply bg-white rounded-card mb-4 border border-slate-200 overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md;
   }
-  
+
   .hero-section {
-    /* Updated hero section to support full-bleed imagery with padding */
-    @apply relative overflow-hidden pt-28 pb-24;
+    @apply relative min-h-[90vh] flex items-center justify-center bg-cover bg-center bg-no-repeat;
   }
-  
-  /* Dark overlay used on hero images for readability */
+
   .hero-overlay {
-    @apply absolute inset-0 bg-gradient-to-br from-professional-navy-800/80 to-healing-green-800/30;
+    @apply absolute inset-0 bg-gradient-to-br from-ink-900/85 via-ink-900/75 to-brand-teal-700/70;
   }
-  
+
   .section-padding {
-    @apply py-20;
+    @apply py-16 md:py-20 lg:py-28;
   }
-  
+
   .container-custom {
-    @apply max-w-7xl mx-auto px-6;
+    @apply max-w-container mx-auto px-4 sm:px-6 lg:px-10;
   }
-  
+
   .narrow-container {
-    @apply max-w-4xl mx-auto px-6;
+    @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-10;
+  }
+
+  /* Mobile-first responsive utilities */
+  @media (max-width: 640px) {
+    .hero-section {
+      min-height: 85vh;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .service-card,
+    .testimonial-card {
+      @apply p-8;
+    }
+  }
+}
+
+@layer utilities {
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-in {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out;
+  }
+
+  .animate-slide-in {
+    animation: slide-in 0.5s ease-out;
   }
 }

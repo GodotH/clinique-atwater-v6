@@ -10,6 +10,7 @@ const defaultLocale = "en"
 function getLocale(request: NextRequest) {
   const negotiatorHeaders: Record<string, string> = {}
   request.headers.forEach((value, key) => (negotiatorHeaders[key] = value))
+
   // @ts-ignore locales are readonly
   const languages = new Negotiator({ headers: negotiatorHeaders }).languages()
   const locale = match(languages, locales, defaultLocale)
@@ -18,11 +19,14 @@ function getLocale(request: NextRequest) {
 
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname
+
   // Check if the pathname already has a locale
-  const pathnameHasLocale = locales.some(
-    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
+  const pathnameHasLocale = locales.some((locale) => 
+    pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   )
+
   if (pathnameHasLocale) return
+
   // Redirect if there is no locale
   const locale = getLocale(request)
   request.nextUrl.pathname = `/${locale}${pathname}`
@@ -31,7 +35,7 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    // Skip all internal paths (_next, api, etc) and static assets like images
-    "/((?!api|_next/static|_next/image|favicon.ico|site.webmanifest|.*\\.(png|jpg|jpeg|webp|svg|gif)).*)",
+    // Skip all internal paths (_next, api, etc) and static assets
+    "/((?!api|_next/static|_next/image|favicon.ico|site.webmanifest|.*\\.png|.*\\.jpg|.*\\.jpeg|.*\\.svg|.*\\.gif|.*\\.webp|.*\\.ico).*)",
   ],
 }
