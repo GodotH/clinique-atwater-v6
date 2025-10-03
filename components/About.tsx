@@ -14,7 +14,7 @@ export default function About() {
   ]
 
   return (
-    <section id="about" className="section-padding bg-mist-50">
+    <section id="about" className="section-padding bg-about">
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
           {/* Content Side */}

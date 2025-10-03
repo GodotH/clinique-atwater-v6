@@ -15,7 +15,7 @@ export default function Pricing() {
   ]
 
   return (
-    <section id="pricing" className="section-padding bg-white">
+    <section id="pricing" className="section-padding bg-pricing">
       <div className="container-custom">
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-ink-900 mb-6 tracking-tight">

@@ -17,7 +17,7 @@ export default function Contact() {
   ]
 
   return (
-    <section id="contact" className="section-padding bg-mist-50">
+    <section id="contact" className="section-padding bg-contact">
       <div className="container-custom">
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-ink-900 mb-6 tracking-tight">

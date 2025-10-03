@@ -44,7 +44,7 @@ export default function Hero() {
 
             {/* HURT LESS MOVE MORE on single line */}
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-white/95 whitespace-nowrap">
-              {t.hero.subtitle} <span className="text-leaf-500">MOVE</span> <span className="text-black">More</span>
+              {t.hero.subtitle} <span className="text-leaf-500">MOVE</span> <span className="text-white">More</span>
             </h2>
 
             {/* Description */}
