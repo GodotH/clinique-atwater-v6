@@ -46,15 +46,14 @@ export default function Header() {
       <nav className="container-custom flex items-center justify-between">
         {/* Logo & Wordmark */}
         <Link href={`/${currentLang}`} className="flex items-center gap-3 group">
-          <div className="relative w-10 h-10 transition-transform duration-300 group-hover:scale-105">
-            <Image
-              src="/images/logo.png"
-              alt="Clinique Atwater Logo"
-              fill
-              className="object-contain"
-              priority
-            />
-          </div>
+          <Image
+            src="/images/logo.png"
+            alt="Clinique Atwater logo"
+            width={40}
+            height={40}
+            priority
+            className="w-10 h-10 object-contain drop-shadow-md"
+          />
           <span className={`font-bold text-ink-900 transition-all duration-300 ${
             scrolled ? 'text-lg' : 'text-xl'
           }`}>

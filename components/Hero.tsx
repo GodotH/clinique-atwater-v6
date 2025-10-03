@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { useTranslations } from "../app/i18n/client"
 import CallNowButton from "./CallNowButton"
 
@@ -9,15 +10,22 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="hero-section pt-24 pb-20"
-      style={{
-        backgroundImage: 'url(/images/DrTanguay.png)',
-        backgroundPosition: 'center right',
-        backgroundSize: 'cover',
-      }}
+      className="hero-section pt-24 pb-20 relative"
     >
-      {/* Overlay */}
-      <div className="hero-overlay" />
+      {/* Full-bleed hero image with custom cropping */}
+      <Image
+        src="/images/DrTanguay.png"
+        alt=""
+        fill
+        priority
+        className="object-cover"
+        style={{ objectPosition: '30% 50%' }} // crop from the left
+      />
+      {/* Dark gradient overlay with softer transparency */}
+      <div
+        className="hero-overlay"
+        style={{ opacity: 0.85 }}
+      />
 
       {/* Content */}
       <div className="container-custom relative z-10">
@@ -36,7 +44,7 @@ export default function Hero() {
 
             {/* HURT LESS MOVE MORE on single line */}
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-white/95 whitespace-nowrap">
-              {t.hero.subtitle} <span className="text-leaf-500">{t.hero.cta}</span>
+              {t.hero.subtitle} <span className="text-leaf-500">MOVE</span> <span className="text-black">More</span>
             </h2>
 
             {/* Description */}
