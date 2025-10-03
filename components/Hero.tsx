@@ -19,7 +19,8 @@ export default function Hero() {
         fill
         priority
         className="object-cover"
-        style={{ objectPosition: '30% 50%' }} // crop from the left
+        style={{ objectPosition: 'center center' }}
+        sizes="100vw"
       />
       {/* Dark gradient overlay with softer transparency */}
       <div
