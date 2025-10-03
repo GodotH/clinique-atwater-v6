@@ -44,21 +44,18 @@ export default function Header() {
       }`}
     >
       <nav className="container-custom flex items-center justify-between">
-        {/* Logo & Wordmark */}
-        <Link href={`/${currentLang}`} className="flex items-center gap-3 group">
+        {/* Logo */}
+        <Link href={`/${currentLang}`} className="group">
           <Image
-            src="/images/logo.png"
-            alt="Clinique Atwater logo"
-            width={40}
-            height={40}
+            src="/images/logoAtwater_big.png"
+            alt="Clinique Chiropratique Atwater"
+            width={220}
+            height={60}
             priority
-            className="w-10 h-10 object-contain drop-shadow-md"
+            className={`object-contain transition-all duration-300 ${
+              scrolled ? 'h-12' : 'h-14'
+            }`}
           />
-          <span className={`font-bold text-ink-900 transition-all duration-300 ${
-            scrolled ? 'text-lg' : 'text-xl'
-          }`}>
-            CLINIQUE ATWATER
-          </span>
         </Link>
 
         {/* Desktop Navigation */}

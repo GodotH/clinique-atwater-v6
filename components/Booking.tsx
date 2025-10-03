@@ -2,11 +2,10 @@
 
 import { useState } from "react"
 import { useTranslations } from "../app/i18n/client"
-import { Calendar, Send, CheckCircle } from "lucide-react"
+import { Calendar, Send } from "lucide-react"
 
 export default function Booking() {
   const t = useTranslations()
-  const [selectedConcern, setSelectedConcern] = useState("")
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -17,7 +16,7 @@ export default function Booking() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     // Here you would typically send the form data to your backend
-    console.log('Form submitted:', { ...formData, concern: selectedConcern })
+    console.log('Form submitted:', formData)
     // Show success message or redirect
   }
 
@@ -40,49 +39,7 @@ export default function Booking() {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Primary Concerns Selection */}
-            <div>
-              <h3 className="text-2xl font-semibold text-professional-navy-800 mb-6">
-                {t.booking.primaryConcern}
-              </h3>
-              
-              <div className="grid gap-3">
-                {t.booking.concerns.map((concern, index) => (
-                  <label
-                    key={index}
-                    className={`flex items-center p-4 border-2 rounded-xl cursor-pointer transition-all duration-200 ${
-                      selectedConcern === concern
-                        ? 'border-trust-blue-500 bg-trust-blue-50'
-                        : 'border-gray-200 hover:border-trust-blue-300 hover:bg-gray-50'
-                    }`}
-                  >
-                    <input
-                      type="radio"
-                      name="concern"
-                      value={concern}
-                      checked={selectedConcern === concern}
-                      onChange={(e) => setSelectedConcern(e.target.value)}
-                      className="sr-only"
-                    />
-                    <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center mr-3 ${
-                      selectedConcern === concern
-                        ? 'border-trust-blue-500 bg-trust-blue-500'
-                        : 'border-gray-300'
-                    }`}>
-                      {selectedConcern === concern && (
-                        <CheckCircle className="w-3 h-3 text-white fill-current" />
-                      )}
-                    </div>
-                    <span className="text-gray-700 font-medium">{concern}</span>
-                  </label>
-                ))}
-              </div>
-            </div>
-
-            {/* Contact Form */}
-            <div>
+        <div className="max-w-2xl mx-auto">
               <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-8 shadow-medical">
                 <div className="text-center mb-6">
                   <Calendar className="w-12 h-12 text-healing-green-600 mx-auto mb-4" />
@@ -169,8 +126,6 @@ export default function Booking() {
                   We respect your privacy and will never share your information.
                 </p>
               </form>
-            </div>
-          </div>
         </div>
       </div>
     </section>
