@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.75rem;
+
+    /* Healthcare specific CSS variables */
+    --trust-blue: 214 100% 37%;
+    --healing-green: 160 84% 39%;
+    --professional-navy: 217 32% 17%;
+    --pain-red: 0 79% 63%;
+    --wellness-teal: 188 95% 37%;
+    --recovery-gold: 31 95% 42%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .cta-primary {
+    @apply bg-gradient-to-br from-trust-blue-600 to-trust-blue-700 text-white font-semibold py-4 px-8 rounded-xl border-none cursor-pointer inline-block text-center transition-all duration-300 shadow-trust hover:from-trust-blue-700 hover:to-trust-blue-800 hover:-translate-y-1 hover:shadow-lg uppercase tracking-wide text-lg;
+  }
+  
+  .cta-secondary {
+    @apply bg-white text-trust-blue-600 border-2 border-trust-blue-600 font-semibold py-4 px-8 rounded-xl inline-block transition-all duration-300 hover:bg-trust-blue-600 hover:text-white hover:-translate-y-0.5 text-lg;
+  }
+  
+  .service-card {
+    @apply bg-white rounded-2xl p-8 shadow-soft border border-gray-200 transition-all duration-300 relative overflow-hidden hover:-translate-y-1.5 hover:shadow-medical;
+  }
+  
+  .service-card::before {
+    @apply content-[''] absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-healing-green-600 to-wellness-teal-600;
+  }
+  
+  .testimonial-card {
+    @apply bg-gradient-to-br from-gray-50 to-white rounded-3xl p-10 shadow-medical mb-8 border border-gray-100 relative;
+  }
+  
+  .condition-card {
+    @apply bg-white border-l-4 border-pain-red-600 p-6 rounded-lg shadow-sm mb-4 transition-transform duration-300 hover:translate-x-1 hover:border-healing-green-600 hover:shadow-md;
+  }
+  
+  .process-step {
+    @apply text-center p-10 bg-white rounded-2xl shadow-soft mb-8 relative;
+  }
+  
+  .stat-card {
+    @apply text-center p-6 bg-gradient-to-br from-trust-blue-600 to-healing-green-600 text-white rounded-xl shadow-trust;
+  }
+  
+  .faq-item {
+    @apply bg-white rounded-xl mb-4 shadow-sm border border-gray-200 overflow-hidden;
+  }
+  
+  .hero-section {
+    /* Updated hero section to support full-bleed imagery with padding */
+    @apply relative overflow-hidden pt-28 pb-24;
+  }
+  
+  /* Dark overlay used on hero images for readability */
+  .hero-overlay {
+    @apply absolute inset-0 bg-gradient-to-br from-professional-navy-800/80 to-healing-green-800/30;
+  }
+  
+  .section-padding {
+    @apply py-20;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto px-6;
+  }
+  
+  .narrow-container {
+    @apply max-w-4xl mx-auto px-6;
+  }
+}

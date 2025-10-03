@@ -1,0 +1,332 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "testimonials": "Testimonials",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "book": "Book Now"
+  },
+  "hero": {
+    "tagline": "Montreal's Trusted Pain Treatment Professionals Since 2007",
+    "title": "Break Free From Pain",
+    "subtitle": "Hurt Less",
+    "cta": "MOVE More",
+    "description": "Modern, evidence-based treatment approaches integrating Modern Chiropractic, Biomechanics and Applied Kinesiology to accelerate your pain relief and get you back to living your best life",
+    "bookButton": "Book Your Pain-Relief Treatment",
+    "callButton": "Call Now: (514) 667-3911"
+  },
+  "problems": {
+    "title": "Are you still in pain?",
+    "subtitle": "Conditions We Treat:",
+    "chronic": {
+      "title": "Chronic Pain",
+      "description": "Back, neck, shoulder, elbow, wrist, hip, knee, foot"
+    },
+    "nerve": {
+      "title": "Nerve Pain",
+      "description": "Headaches, nerve pain, sciatica, carpal tunnel"
+    },
+    "joint": {
+      "title": "Joint Pain",
+      "description": "Stiffness, arthritis, bursitis, adhesive capsulitis, and herniated discs"
+    },
+    "sports": {
+      "title": "Sports Injuries",
+      "description": "Sprains, strains, tendinitis, bursitis and overuse injuries"
+    }
+  },
+  "services": {
+    "title": "How Our Treatment Works",
+    "subtitle": "Chronic pain can often feel like an unsolvable puzzle.",
+    "description": "Our chiropractors are experts in neuro-musculo-skeletal diagnosis and treatment, addressing the real causes of pain through 3 main factors:",
+    "factors": {
+      "biomechanical": "Bio-mechanical - How your body moves and compensates",
+      "biochemical": "Bio-chemical - Internal healing factors (inflammation, nutrition)",
+      "emotional": "Emotional - Stress patterns and lifestyle"
+    },
+    "servicesTitle": "Professional Pain Treatment Services",
+    "chiropractic": {
+      "title": "Chiropractic Care",
+      "description": "Consult with our health experts who specialize in, diagnose, treat, and help prevent physical pain of the nervous system, muscles, and skeleton (neuromusculoskeletal - NMS).",
+      "benefits": [
+        "Improves mobility",
+        "Restores function",
+        "Relieves pain"
+      ]
+    },
+    "kinesiology": {
+      "title": "Applied Kinesiology",
+      "description": "Applied Kinesiology (AK) offers a natural, comprehensive, and highly effective way to address pain and imbalances in the body. AK targets and helps correct the root causes by addressing the body's interconnected systems—joints, muscles, nerves, and posture.",
+      "benefits": [
+        "Decodes your body's signals",
+        "Targets the root causes of pain",
+        "Provides real-time feedback"
+      ]
+    },
+    "sports": {
+      "title": "Sports Therapy",
+      "description": "Proven treatment, rehabilitation and injury prevention designed specifically for athletes and active individuals who demand peak performance.",
+      "benefits": [
+        "Accelerates recovery",
+        "Prevents further injury",
+        "Enhances performance"
+      ]
+    },
+    "pain": {
+      "title": "Pain Solutions",
+      "description": "Safe and effective integrated solutions for chronic pain conditions through corrective therapeutic interventions and personalized treatment protocols.",
+      "benefits": [
+        "Precise, targeted treatments",
+        "Proven scientific protocols",
+        "Start feeling good again!"
+      ]
+    }
+  },
+  "benefits": {
+    "title": "Professional Pain Treatment & Therapy in Montreal",
+    "description": "At Clinique Chiropratique Atwater, we combine modern, evidence-based treatment approaches to accelerate your pain relief and get you back to living your best life.",
+    "whyChoose": "Why Choose Us:",
+    "reasons": [
+      "Suitable for all ages and body types",
+      "Safe, natural, and cost-effective",
+      "Targeted treatment for lasting pain relief"
+    ],
+    "trackRecord": "Our Track Record",
+    "stats": {
+      "experience": "18+",
+      "experienceLabel": "Years of Service",
+      "patients": "4500+",
+      "patientsLabel": "Patients Served",
+      "approaches": "3",
+      "approachesLabel": "Scientific Approaches",
+      "satisfaction": "96%",
+      "satisfactionLabel": "Patient Satisfaction"
+    },
+    "certifications": "Trusted & Certified",
+    "certificationsDesc": "Member of leading healthcare organizations:",
+    "organizations": [
+      "ICAK - International College of Applied Kinesiology",
+      "CCA - Canadian Chiropractic Association",
+      "ACQ - Quebec Chiropractic Association",
+      "OCQ - Chiropractic Order of Quebec"
+    ]
+  },
+  "process": {
+    "title": "Your Path to Lasting Relief: A Simple 3-Step Process",
+    "subtitle": "Chiropractic is a powerful tool against physical pain and an effective way to create lasting change.",
+    "steps": [
+      {
+        "title": "Schedule Your Consultation",
+        "description": "Booking your initial consultation with a few clicks!"
+      },
+      {
+        "title": "Personalized Care",
+        "description": "We diagnose the problem and work to solve it with science-backed techniques."
+      },
+      {
+        "title": "Enjoy the Benefits",
+        "description": "Experience decreased pain and increased mobility so you can get back to life!"
+      }
+    ],
+    "ready": "Ready to get started?",
+    "cta": "Book Your Pain-Relief Treatment"
+  },
+  "testimonials": {
+    "title": "What Our Patients Say",
+    "subtitle": "Read real reviews from Montreal patients who have experienced lasting results at Clinique Chiropratique Atwater.",
+    "reviews": [
+      {
+        "title": "I'm Out of Pain!",
+        "content": "His treatments make my body feel better. I'm out of pain. I can push my body. I can do my sports without feeling pain! Any time I have an ache or a pain that I'm not comfortable with, he can identify the problem and he works on the problem, and then I'm good to go!",
+        "name": "Daphne Cunlife",
+        "role": "Dance teacher & former professional skater"
+      },
+      {
+        "title": "I Felt Welcomed and Cared for...",
+        "content": "From the moment I walked in, I felt welcomed and cared for by Dr. Tanguay! He took the time to truly understand my concerns and created a personalized treatment plan that has made a huge difference in my daily life.",
+        "name": "Hilea Zaari",
+        "role": "Medical Care Coordinator"
+      },
+      {
+        "title": "Very Professional Approach!",
+        "content": "Very professional approach! After the first session, my neck and shoulder pain were greatly reduced, I even felt like 'back in the days', before my injury. I would definitely recommend Dr. Simon Tanguay to anyone in pain.",
+        "name": "William-Olivier Masson",
+        "role": "Director"
+      },
+      {
+        "title": "A Completely Different Experience!",
+        "content": "If you want to have a completely different experience and start looking for the real causes of your problems rather than just treating the symptoms, you've come to the right place! Dr. Tanguay is an outstanding chiropractor with a very holistic vision and a true passion for helping others.",
+        "name": "Vincent Paradis",
+        "role": "Osteopath"
+      }
+    ]
+  },
+  "about": {
+    "title": "Meet Dr. Simon Tanguay",
+    "subtitle": "Chiropractor",
+    "story": "After a life-changing 40-foot fall shattered his Olympic taekwondo dreams and left him in chronic pain, Dr Simon dedicated himself to uncovering pain solutions that truly work.",
+    "experience": "For over 20 years, he has helped Montreal patients find lasting relief by addressing the true causes of pain.",
+    "approach": "His approach examines three critical areas: how your body moves and compensates (biomechanical), internal healing factors (biochemical), and stress patterns (emotional).",
+    "philosophy": "Dr. Simon believes in true patient empowerment — working with you to uncover and address why your pain persists and providing the tools you need to make and maintain your progress.",
+    "conviction": "His conviction is that your pain isn't random — it's a puzzle waiting to be solved."
+  },
+  "firstVisit": {
+    "title": "During your first experience at our clinic, we will:",
+    "items": [
+      "Evaluate each of the 7 bodily structures",
+      "Identify the main factors contributing to your pain",
+      "Assess hidden causes of pain that can interfere with your recovery",
+      "Create a clear road map - what to treat, in what order, and how"
+    ]
+  },
+  "booking": {
+    "title": "Request Your Pain-Relief Treatment",
+    "subtitle": "We will contact you to assess your condition and determine if there is a fit.",
+    "primaryConcern": "Select Your Primary Concern:",
+    "concerns": [
+      "Back Pain",
+      "Neck Pain",
+      "Joint Pain (Shoulder, Knee, Hip, etc.)",
+      "Headaches & Migraines",
+      "Nerve Pain",
+      "Sciatica",
+      "Carpal Tunnel Syndrome",
+      "Sports Injury",
+      "Muscle Strain or Sprain",
+      "Whiplash",
+      "Postural Issues",
+      "TMJ (Jaw Pain)",
+      "Arthritis-related Pain",
+      "Other Physical Pain/Discomfort"
+    ],
+    "cta": "Book Your Pain-Relief Treatment"
+  },
+  "rates": {
+    "title": "Treatment Options & Pricing",
+    "initialOptions": "Initial Visit Options",
+    "initial": {
+      "standard": {
+        "title": "Initial Session (60 minutes) - $240",
+        "includes": [
+          "Medical History & File Setup - $120",
+          "Physical Examination & Test Treatment - $120"
+        ]
+      },
+      "complete": {
+        "title": "Complete Initial Session (90 minutes) - $360",
+        "includes": [
+          "Medical History & File Setup - $120",
+          "Complete Physical Exam - $120",
+          "Full Treatment - $120"
+        ]
+      }
+    },
+    "followUp": "Follow-up Visits",
+    "followUpOptions": [
+      "Short Treatment - 30 minutes: $120",
+      "Long Treatment - 60 minutes: $240"
+    ],
+    "additionalCharges": "Additional charges may apply for supplements, natural products, or therapeutic taping.",
+    "downloadForms": "Download: New Patient Forms",
+    "cancellation": {
+      "title": "Cancellation Policy",
+      "description": "Out of respect for all patients, 100% of the visit fee will be charged for:",
+      "items": [
+        "No-shows",
+        "Arrivals more than 15 minutes late",
+        "Cancellations made less than 24 hours in advance"
+      ],
+      "responsibility": "Your appointment time is reserved specifically for you. It is your responsibility to arrive on time."
+    },
+    "insurance": {
+      "title": "Insurance Coverage",
+      "description": "Covered by most health insurance providers: Receipts provided for insurance and income tax purposes.",
+      "providers": [
+        "Desjardins",
+        "Manulife",
+        "Blue Cross",
+        "Sun Life",
+        "Canada Life",
+        "And many more"
+      ]
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "question": "Why am I still in pain?",
+        "answer": "Pain is your body's warning that something isn't working properly. Here's what actually happens when you get hurt: Your body doesn't completely heal injuries—it patches them with scar tissue, then creates workarounds to keep you moving pain-free. This masks the real problem. When you first get injured, your body is remarkably good at compensating. It alters your movement patterns and recruits different muscles to take over for the damaged ones. This keeps you pain-free initially, but the original problem remains—it's just hidden. The problem with compensation: Your body can only maintain these workarounds for so long. Eventually, it exhausts its ability to compensate. When these backup systems fail, chronic pain emerges—sometimes in a completely different location from the original injury."
+      },
+      {
+        "question": "How many sessions do I need?",
+        "answer": "Recovery time varies based on your unique situation. Some patients experience noticeable relief after their first visit, while others need more time to address the underlying issues slowing their healing and recovery. Factors that influence your healing timeline include: Cause, Severity and complexity, Duration, Health history, Your body's healing capacity, and Lifestyle factors. Typical Treatment Timelines: Recent acute pain (days to weeks): 3-6 sessions. Moderate problems (1-6 months): 8-12 sessions. Chronic conditions (6+ months): 15-25+ sessions."
+      },
+      {
+        "question": "What is Chiropractic?",
+        "answer": "Chiropractic is a type of healthcare focused on your spine and nervous system, which controls everything in your body. When spinal joints get stuck or misaligned, they interfere with nerve communication, causing pain and health problems. Chiropractors restore proper movement and alignment with a chiropractic adjustment—a precise, controlled hand (or instrument) movement applied to specific joints that have become restricted in their movement. This helps restore proper joint motion and position, enhancing your body's natural ability to heal itself, without drugs or surgery."
+      },
+      {
+        "question": "What training does a chiropractor have?",
+        "answer": "Doctors of Chiropractic (DC) earn their degrees after extensive education and training, which makes them experts in the diagnosis, treatment, and prevention of neuromusculoskeletal conditions. In Quebec, chiropractors complete a 5-year doctoral program (245 university credits) at an accredited institution, similar to medical doctors (who complete 225 university credits). The 4,969+ hours of coursework covers: Fundamental sciences, Clinical sciences, Chiropractic sciences, Complementary disciplines, Real patient experience from year one, and 18-month supervised clinical internship."
+      },
+      {
+        "question": "Is chiropractic care safe?",
+        "answer": "Chiropractic care is one of the safest healthcare treatments available, with serious complications occurring in fewer than 1 in 1,000,000 treatments. Among the 9,000+ licensed practitioners across Canada, all with doctoral-level training and strict regulatory oversight, an estimated 30 million chiropractic treatments are delivered each year to 4.7 million Canadians—with an exceptional safety record. The most common effects are mild and temporary: Slight soreness for 24-48 hours, Brief stiffness as your body adjusts to improved movement, Temporary tiredness as your nervous system recalibrates."
+      },
+      {
+        "question": "How effective is chiropractic care in Canada?",
+        "answer": "Chiropractic care is safe, effective and widely used in Canada. Each year, nearly 5 million Canadians (about 1 in 7) see a chiropractor with 90% patient satisfaction rate—adding up to over 30 million chiropractic sessions annually across the country. Chiropractic helps patients recover faster, avoid unnecessary medications or surgeries, and live pain-free—with millions of success stories every year."
+      },
+      {
+        "question": "What is Applied Kinesiology?",
+        "answer": "Applied Kinesiology (AK) was developed by Dr. George Goodheart in 1964. It combines principles from chiropractic, osteopathy, physiotherapy, nutrition, and manual therapy to help practitioners address stubborn, complex conditions. By challenging your body and observing its real-time feedback through manual muscle testing and pain point responses, practitioners decode your body's signals to identify hidden stressors in three key areas: Mechanical, Chemical, and Emotional. Once the source is identified, precise, body-specific corrections are applied. Progress is then tracked during each session through manual muscle testing and pain point responses—ensuring treatment efficiency."
+      }
+    ]
+  },
+  "clinic": {
+    "title": "Visit Our Montreal Clinic",
+    "description": "Conveniently located in downtown Montreal with easy access to public transportation and plenty of parking. We serve you in both English and French.",
+    "contact": "Contact Information",
+    "address": "2228 St-Antoine Ouest, Montreal, QC H3J 1A7",
+    "phone": "(514) 667-3911",
+    "email": "ChiroAtwater@gmail.com",
+    "hours": "Hours",
+    "schedule": {
+      "monday": "Monday: 3:00 PM - 8:00 PM",
+      "tuesday": "Tuesday: 9:00 AM - 8:00 PM",
+      "wednesday": "Wednesday: 9:00 AM - 8:00 PM",
+      "thursday": "Thursday: 9:00 AM - 8:00 PM",
+      "friday": "Friday: 9:00 AM - 3:00 PM",
+      "weekend": "Weekend: By appointment only (emergencies)"
+    },
+    "bookCta": "Book Your Pain-Relief Treatment"
+  },
+  "footer": {
+    "title": "Clinique Chiropratique Atwater",
+    "description": "Leading healthcare provider in Montreal, dedicated to your health and wellness journey.",
+    "services": "Therapeutic Services",
+    "servicesList": [
+      "Chiropractic Care",
+      "Applied Kinesiology",
+      "Sports Therapy",
+      "Pain Solutions"
+    ],
+    "quickLinks": "Quick Links",
+    "linksList": [
+      "About Us",
+      "Patient Results",
+      "Insurance Coverage",
+      "Contact Information"
+    ],
+    "contactInfo": "Contact Info",
+    "finalCta": "Book Your Initial Session"
+  },
+  "meta": {
+    "title": "Montreal Chiropractic Clinic - Dr. Simon Tanguay | Pain Relief & Treatment",
+    "description": "Professional pain relief and chiropractic treatment in Montreal. Dr. Simon Tanguay specializes in chronic pain, sports injuries, and natural healing. Book your consultation today."
+  }
+}

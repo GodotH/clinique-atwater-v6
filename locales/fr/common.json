@@ -1,0 +1,332 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "services": "Services",
+    "testimonials": "Témoignages",
+    "pricing": "Tarifs",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "book": "Réserver"
+  },
+  "hero": {
+    "tagline": "Professionnels de traitement de la douleur de confiance à Montréal depuis 2007",
+    "title": "Libérez-vous de la douleur",
+    "subtitle": "Moins de mal",
+    "cta": "PLUS de mouvement",
+    "description": "Approches de traitement modernes et basées sur des preuves intégrant la chiropractie moderne, la biomécanique et la kinésiologie appliquée pour accélérer votre soulagement de la douleur et vous permettre de retrouver votre meilleure vie",
+    "bookButton": "Réservez votre traitement anti-douleur",
+    "callButton": "Appelez maintenant: (514) 667-3911"
+  },
+  "problems": {
+    "title": "Avez-vous encore mal?",
+    "subtitle": "Conditions que nous traitons:",
+    "chronic": {
+      "title": "Douleur chronique",
+      "description": "Dos, cou, épaule, coude, poignet, hanche, genou, pied"
+    },
+    "nerve": {
+      "title": "Douleur nerveuse",
+      "description": "Maux de tête, douleur nerveuse, sciatique, tunnel carpien"
+    },
+    "joint": {
+      "title": "Douleur articulaire",
+      "description": "Raideur, arthrite, bursite, capsulite adhésive et hernies discales"
+    },
+    "sports": {
+      "title": "Blessures sportives",
+      "description": "Entorses, foulures, tendinite, bursite et blessures de surutilisation"
+    }
+  },
+  "services": {
+    "title": "Comment fonctionne notre traitement",
+    "subtitle": "La douleur chronique peut souvent sembler être un casse-tête insoluble.",
+    "description": "Nos chiropraticiens sont des experts en diagnostic et traitement neuro-musculo-squelettique, s'attaquant aux vraies causes de la douleur à travers 3 facteurs principaux:",
+    "factors": {
+      "biomechanical": "Bio-mécanique - Comment votre corps bouge et compense",
+      "biochemical": "Bio-chimique - Facteurs de guérison internes (inflammation, nutrition)",
+      "emotional": "Émotionnel - Schémas de stress et mode de vie"
+    },
+    "servicesTitle": "Services professionnels de traitement de la douleur",
+    "chiropractic": {
+      "title": "Soins chiropratiques",
+      "description": "Consultez nos experts en santé qui se spécialisent dans le diagnostic, le traitement et la prévention de la douleur physique du système nerveux, des muscles et du squelette (neuromusculosquelettique - NMS).",
+      "benefits": [
+        "Améliore la mobilité",
+        "Restaure la fonction",
+        "Soulage la douleur"
+      ]
+    },
+    "kinesiology": {
+      "title": "Kinésiologie appliquée",
+      "description": "La kinésiologie appliquée (KA) offre un moyen naturel, complet et très efficace de traiter la douleur et les déséquilibres du corps. La KA cible et aide à corriger les causes profondes en s'attaquant aux systèmes interconnectés du corps — articulations, muscles, nerfs et posture.",
+      "benefits": [
+        "Décode les signaux de votre corps",
+        "Cible les causes profondes de la douleur",
+        "Fournit un feedback en temps réel"
+      ]
+    },
+    "sports": {
+      "title": "Thérapie sportive",
+      "description": "Traitement éprouvé, réhabilitation et prévention des blessures conçus spécifiquement pour les athlètes et les personnes actives qui exigent des performances optimales.",
+      "benefits": [
+        "Accélère la récupération",
+        "Prévient les blessures supplémentaires",
+        "Améliore les performances"
+      ]
+    },
+    "pain": {
+      "title": "Solutions contre la douleur",
+      "description": "Solutions intégrées sûres et efficaces pour les conditions de douleur chronique grâce à des interventions thérapeutiques correctives et des protocoles de traitement personnalisés.",
+      "benefits": [
+        "Traitements précis et ciblés",
+        "Protocoles scientifiques éprouvés",
+        "Recommencez à vous sentir bien!"
+      ]
+    }
+  },
+  "benefits": {
+    "title": "Traitement professionnel de la douleur et thérapie à Montréal",
+    "description": "À la Clinique Chiropratique Atwater, nous combinons des approches de traitement modernes et basées sur des preuves pour accélérer votre soulagement de la douleur et vous permettre de retrouver votre meilleure vie.",
+    "whyChoose": "Pourquoi nous choisir:",
+    "reasons": [
+      "Convient à tous les âges et types de corps",
+      "Sûr, naturel et rentable",
+      "Traitement ciblé pour un soulagement durable de la douleur"
+    ],
+    "trackRecord": "Notre bilan",
+    "stats": {
+      "experience": "18+",
+      "experienceLabel": "Années de service",
+      "patients": "4500+",
+      "patientsLabel": "Patients servis",
+      "approaches": "3",
+      "approachesLabel": "Approches scientifiques",
+      "satisfaction": "96%",
+      "satisfactionLabel": "Satisfaction des patients"
+    },
+    "certifications": "Fiable et certifié",
+    "certificationsDesc": "Membre d'organisations de soins de santé de premier plan:",
+    "organizations": [
+      "ICAK - Collège international de kinésiologie appliquée",
+      "CCA - Association chiropratique canadienne",
+      "ACQ - Association chiropratique du Québec",
+      "OCQ - Ordre des chiropraticiens du Québec"
+    ]
+  },
+  "process": {
+    "title": "Votre chemin vers un soulagement durable: Un processus simple en 3 étapes",
+    "subtitle": "La chiropractie est un outil puissant contre la douleur physique et un moyen efficace de créer un changement durable.",
+    "steps": [
+      {
+        "title": "Planifiez votre consultation",
+        "description": "Réservez votre consultation initiale en quelques clics!"
+      },
+      {
+        "title": "Soins personnalisés",
+        "description": "Nous diagnostiquons le problème et travaillons à le résoudre avec des techniques scientifiquement prouvées."
+      },
+      {
+        "title": "Profitez des avantages",
+        "description": "Ressentez une diminution de la douleur et une mobilité accrue pour que vous puissiez retrouver la vie!"
+      }
+    ],
+    "ready": "Prêt à commencer?",
+    "cta": "Réservez votre traitement anti-douleur"
+  },
+  "testimonials": {
+    "title": "Ce que disent nos patients",
+    "subtitle": "Lisez de vrais avis de patients montréalais qui ont obtenu des résultats durables à la Clinique Chiropratique Atwater.",
+    "reviews": [
+      {
+        "title": "Je n'ai plus mal!",
+        "content": "Ses traitements font que mon corps se sent mieux. Je n'ai plus mal. Je peux pousser mon corps. Je peux faire du sport sans ressentir de douleur! Chaque fois que j'ai une douleur qui me dérange, il peut identifier le problème et il travaille sur le problème, et ensuite je suis prêt à partir!",
+        "name": "Daphne Cunlife",
+        "role": "Professeure de danse et ancienne patineuse professionnelle"
+      },
+      {
+        "title": "Je me suis sentie accueillie et prise en charge...",
+        "content": "Dès l'instant où je suis entrée, je me suis sentie accueillie et prise en charge par Dr. Tanguay! Il a pris le temps de vraiment comprendre mes préoccupations et a créé un plan de traitement personnalisé qui a fait une énorme différence dans ma vie quotidienne.",
+        "name": "Hilea Zaari",
+        "role": "Coordinatrice de soins médicaux"
+      },
+      {
+        "title": "Approche très professionnelle!",
+        "content": "Approche très professionnelle! Après la première séance, ma douleur au cou et à l'épaule était grandement réduite, j'avais même l'impression d'être 'comme avant', avant ma blessure. Je recommanderais définitivement Dr. Simon Tanguay à toute personne souffrant de douleur.",
+        "name": "William-Olivier Masson",
+        "role": "Directeur"
+      },
+      {
+        "title": "Une expérience complètement différente!",
+        "content": "Si vous voulez avoir une expérience complètement différente et commencer à chercher les vraies causes de vos problèmes plutôt que de simplement traiter les symptômes, vous êtes au bon endroit! Dr. Tanguay est un chiropraticien exceptionnel avec une vision très holistique et une vraie passion pour aider les autres.",
+        "name": "Vincent Paradis",
+        "role": "Ostéopathe"
+      }
+    ]
+  },
+  "about": {
+    "title": "Rencontrez Dr. Simon Tanguay",
+    "subtitle": "Chiropraticien",
+    "story": "Après une chute de 40 pieds qui a brisé ses rêves olympiques de taekwondo et l'a laissé avec des douleurs chroniques, Dr Simon s'est consacré à découvrir des solutions contre la douleur qui fonctionnent vraiment.",
+    "experience": "Depuis plus de 20 ans, il aide les patients montréalais à trouver un soulagement durable en s'attaquant aux vraies causes de la douleur.",
+    "approach": "Son approche examine trois domaines critiques: comment votre corps bouge et compense (biomécanique), les facteurs de guérison internes (biochimique), et les schémas de stress (émotionnel).",
+    "philosophy": "Dr. Simon croit en l'autonomisation réelle du patient — travailler avec vous pour découvrir et traiter pourquoi votre douleur persiste et vous fournir les outils dont vous avez besoin pour progresser et maintenir vos progrès.",
+    "conviction": "Sa conviction est que votre douleur n'est pas aléatoire — c'est un casse-tête qui attend d'être résolu."
+  },
+  "firstVisit": {
+    "title": "Lors de votre première expérience dans notre clinique, nous allons:",
+    "items": [
+      "Évaluer chacune des 7 structures corporelles",
+      "Identifier les principaux facteurs contribuant à votre douleur",
+      "Évaluer les causes cachées de douleur qui peuvent interférer avec votre récupération",
+      "Créer une feuille de route claire - quoi traiter, dans quel ordre, et comment"
+    ]
+  },
+  "booking": {
+    "title": "Demandez votre traitement anti-douleur",
+    "subtitle": "Nous vous contacterons pour évaluer votre condition et déterminer s'il y a une compatibilité.",
+    "primaryConcern": "Sélectionnez votre préoccupation principale:",
+    "concerns": [
+      "Mal de dos",
+      "Douleur au cou",
+      "Douleur articulaire (épaule, genou, hanche, etc.)",
+      "Maux de tête et migraines",
+      "Douleur nerveuse",
+      "Sciatique",
+      "Syndrome du tunnel carpien",
+      "Blessure sportive",
+      "Foulure ou entorse musculaire",
+      "Coup du lapin",
+      "Problèmes posturaux",
+      "ATM (douleur à la mâchoire)",
+      "Douleur liée à l'arthrite",
+      "Autre douleur physique/inconfort"
+    ],
+    "cta": "Réservez votre traitement anti-douleur"
+  },
+  "rates": {
+    "title": "Options de traitement et tarifs",
+    "initialOptions": "Options de visite initiale",
+    "initial": {
+      "standard": {
+        "title": "Séance initiale (60 minutes) - 240$",
+        "includes": [
+          "Historique médical et création de dossier - 120$",
+          "Examen physique et traitement d'essai - 120$"
+        ]
+      },
+      "complete": {
+        "title": "Séance initiale complète (90 minutes) - 360$",
+        "includes": [
+          "Historique médical et création de dossier - 120$",
+          "Examen physique complet - 120$",
+          "Traitement complet - 120$"
+        ]
+      }
+    },
+    "followUp": "Visites de suivi",
+    "followUpOptions": [
+      "Traitement court - 30 minutes: 120$",
+      "Traitement long - 60 minutes: 240$"
+    ],
+    "additionalCharges": "Des frais supplémentaires peuvent s'appliquer pour les suppléments, produits naturels ou le taping thérapeutique.",
+    "downloadForms": "Télécharger: Formulaires nouveaux patients",
+    "cancellation": {
+      "title": "Politique d'annulation",
+      "description": "Par respect pour tous les patients, 100% des frais de visite seront facturés pour:",
+      "items": [
+        "Les absences sans préavis",
+        "Les arrivées de plus de 15 minutes en retard",
+        "Les annulations faites moins de 24 heures à l'avance"
+      ],
+      "responsibility": "Votre heure de rendez-vous est réservée spécifiquement pour vous. Il est de votre responsabilité d'arriver à l'heure."
+    },
+    "insurance": {
+      "title": "Couverture d'assurance",
+      "description": "Couvert par la plupart des fournisseurs d'assurance santé: Reçus fournis pour l'assurance et les fins d'impôt sur le revenu.",
+      "providers": [
+        "Desjardins",
+        "Manuvie",
+        "Croix Bleue",
+        "Sun Life",
+        "Canada Vie",
+        "Et beaucoup d'autres"
+      ]
+    }
+  },
+  "faq": {
+    "title": "Questions fréquemment posées",
+    "questions": [
+      {
+        "question": "Pourquoi ai-je encore mal?",
+        "answer": "La douleur est l'avertissement de votre corps que quelque chose ne fonctionne pas correctement. Voici ce qui se passe réellement quand vous vous blessez: Votre corps ne guérit pas complètement les blessures—il les répare avec du tissu cicatriciel, puis crée des contournements pour vous maintenir en mouvement sans douleur. Cela masque le vrai problème. Quand vous vous blessez pour la première fois, votre corps est remarquablement doué pour compenser. Il modifie vos schémas de mouvement et recrute différents muscles pour remplacer ceux qui sont endommagés. Cela vous garde sans douleur au début, mais le problème original demeure—il est juste caché."
+      },
+      {
+        "question": "Combien de séances ai-je besoin?",
+        "answer": "Le temps de récupération varie selon votre situation unique. Certains patients ressentent un soulagement notable après leur première visite, tandis que d'autres ont besoin de plus de temps pour traiter les problèmes sous-jacents qui ralentissent leur guérison et récupération. Les facteurs qui influencent votre timeline de guérison incluent: la cause, la sévérité et complexité, la durée, l'historique de santé, la capacité de guérison de votre corps, et les facteurs de mode de vie. Timeline de traitement typique: Douleur aiguë récente (jours à semaines): 3-6 séances. Problèmes modérés (1-6 mois): 8-12 séances. Conditions chroniques (6+ mois): 15-25+ séances."
+      },
+      {
+        "question": "Qu'est-ce que la chiropractie?",
+        "answer": "La chiropractie est un type de soins de santé axé sur votre colonne vertébrale et système nerveux, qui contrôle tout dans votre corps. Quand les articulations spinales se bloquent ou se désalignent, elles interfèrent avec la communication nerveuse, causant douleur et problèmes de santé. Les chiropraticiens restaurent le mouvement et l'alignement appropriés avec un ajustement chiropratique—un mouvement de main (ou instrument) précis et contrôlé appliqué à des articulations spécifiques qui sont devenues restreintes dans leur mouvement. Cela aide à restaurer le mouvement et la position articulaires appropriés, améliorant la capacité naturelle de votre corps à se guérir lui-même, sans médicaments ou chirurgie."
+      },
+      {
+        "question": "Quelle formation a un chiropraticien?",
+        "answer": "Les Docteurs en chiropractie (DC) obtiennent leurs diplômes après une éducation et formation extensive, ce qui en fait des experts dans le diagnostic, traitement et prévention des conditions neuromusculosquelettiques. Au Québec, les chiropraticiens complètent un programme doctoral de 5 ans (245 crédits universitaires) dans une institution accréditée, similaire aux médecins (qui complètent 225 crédits universitaires). Les 4 969+ heures de cours couvrent: sciences fondamentales, sciences cliniques, sciences chiropratiques, disciplines complémentaires, expérience avec de vrais patients dès la première année, et stage clinique supervisé de 18 mois."
+      },
+      {
+        "question": "Les soins chiropratiques sont-ils sûrs?",
+        "answer": "Les soins chiropratiques sont l'un des traitements de santé les plus sûrs disponibles, avec des complications graves se produisant dans moins de 1 cas sur 1 000 000 traitements. Parmi les 9 000+ praticiens licenciés à travers le Canada, tous avec une formation de niveau doctoral et une supervision réglementaire stricte, on estime que 30 millions de traitements chiropratiques sont dispensés chaque année à 4,7 millions de Canadiens—avec un dossier de sécurité exceptionnel. Les effets les plus communs sont légers et temporaires: léger endolorissement pendant 24-48 heures, brève raideur alors que votre corps s'ajuste à un mouvement amélioré, fatigue temporaire alors que votre système nerveux se recalibre."
+      },
+      {
+        "question": "Quelle est l'efficacité des soins chiropratiques au Canada?",
+        "answer": "Les soins chiropratiques sont sûrs, efficaces et largement utilisés au Canada. Chaque année, près de 5 millions de Canadiens (environ 1 sur 7) voient un chiropraticien avec un taux de satisfaction patient de 90%—totalisant plus de 30 millions de séances chiropratiques annuellement à travers le pays. La chiropractie aide les patients à récupérer plus rapidement, éviter les médicaments ou chirurgies inutiles, et vivre sans douleur—avec des millions d'histoires de succès chaque année."
+      },
+      {
+        "question": "Qu'est-ce que la kinésiologie appliquée?",
+        "answer": "La kinésiologie appliquée (KA) a été développée par Dr. George Goodheart en 1964. Elle combine les principes de la chiropractie, ostéopathie, physiothérapie, nutrition et thérapie manuelle pour aider les praticiens à traiter les conditions tenaces et complexes. En défiant votre corps et en observant sa rétroaction en temps réel à travers les tests musculaires manuels et les réponses des points de douleur, les praticiens décodent les signaux de votre corps pour identifier les facteurs de stress cachés dans trois domaines clés: mécanique, chimique et émotionnel. Une fois la source identifiée, des corrections précises et spécifiques au corps sont appliquées. Les progrès sont ensuite suivis durant chaque séance à travers les tests musculaires manuels et les réponses des points de douleur—assurant l'efficacité du traitement."
+      }
+    ]
+  },
+  "clinic": {
+    "title": "Visitez notre clinique de Montréal",
+    "description": "Idéalement située dans le centre-ville de Montréal avec un accès facile aux transports publics et beaucoup de stationnement. Nous vous servons en anglais et en français.",
+    "contact": "Informations de contact",
+    "address": "2228 St-Antoine Ouest, Montréal, QC H3J 1A7",
+    "phone": "(514) 667-3911",
+    "email": "ChiroAtwater@gmail.com",
+    "hours": "Heures",
+    "schedule": {
+      "monday": "Lundi: 15h00 - 20h00",
+      "tuesday": "Mardi: 9h00 - 20h00",
+      "wednesday": "Mercredi: 9h00 - 20h00",
+      "thursday": "Jeudi: 9h00 - 20h00",
+      "friday": "Vendredi: 9h00 - 15h00",
+      "weekend": "Week-end: Sur rendez-vous seulement (urgences)"
+    },
+    "bookCta": "Réservez votre traitement anti-douleur"
+  },
+  "footer": {
+    "title": "Clinique Chiropratique Atwater",
+    "description": "Fournisseur de soins de santé de premier plan à Montréal, dédié à votre parcours de santé et de bien-être.",
+    "services": "Services thérapeutiques",
+    "servicesList": [
+      "Soins chiropratiques",
+      "Kinésiologie appliquée",
+      "Thérapie sportive",
+      "Solutions contre la douleur"
+    ],
+    "quickLinks": "Liens rapides",
+    "linksList": [
+      "À propos de nous",
+      "Résultats patients",
+      "Couverture d'assurance",
+      "Informations de contact"
+    ],
+    "contactInfo": "Informations de contact",
+    "finalCta": "Réservez votre séance initiale"
+  },
+  "meta": {
+    "title": "Clinique chiropratique Montréal - Dr. Simon Tanguay | Soulagement et traitement de la douleur",
+    "description": "Soulagement professionnel de la douleur et traitement chiropratique à Montréal. Dr. Simon Tanguay se spécialise dans la douleur chronique, blessures sportives et guérison naturelle. Réservez votre consultation aujourd'hui."
+  }
+}
