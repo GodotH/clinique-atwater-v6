@@ -37,25 +37,26 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-sm py-3'
-          : 'bg-white/90 backdrop-blur-sm py-4'
+          ? 'bg-white/95 backdrop-blur-xl shadow-lg border-b border-slate-100 py-3'
+          : 'bg-white/80 backdrop-blur-md py-4'
       }`}
     >
       <nav className="container-custom flex items-center justify-between">
         {/* Logo */}
-        <Link href={`/${currentLang}`} className="group">
+        <Link href={`/${currentLang}`} className="group relative">
           <Image
             src="/images/logoAtwater_big.png"
             alt="Clinique Chiropratique Atwater"
             width={220}
             height={60}
             priority
-            className={`object-contain transition-all duration-300 ${
+            className={`object-contain transition-all duration-500 group-hover:scale-105 ${
               scrolled ? 'h-12' : 'h-14'
             }`}
           />
+          <div className="absolute inset-0 bg-gradient-to-r from-brand-teal-600/0 via-brand-teal-600/5 to-brand-teal-600/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" />
         </Link>
 
         {/* Desktop Navigation */}
@@ -64,16 +65,17 @@ export default function Header() {
             <Link
               key={item.name}
               href={item.href}
-              className="text-slate-700 hover:text-brand-teal-600 transition-colors duration-200 font-medium text-sm whitespace-nowrap"
+              className="text-slate-700 hover:text-brand-teal-600 transition-all duration-300 font-medium text-sm whitespace-nowrap relative group/link"
             >
               {item.name}
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-brand-teal-600 to-leaf-500 group-hover/link:w-full transition-all duration-300" />
             </Link>
           ))}
 
-          {/* Language Switcher */}
+          {/* Language Switcher with enhanced hover */}
           <Link
             href={`/${otherLang}`}
-            className="text-slate-700 hover:text-brand-teal-600 transition-colors duration-200 font-medium text-sm border border-slate-200 px-3 py-1.5 rounded-lg hover:border-brand-teal-600"
+            className="text-slate-700 hover:text-brand-teal-600 transition-all duration-300 font-medium text-sm border-2 border-slate-200 px-3 py-1.5 rounded-lg hover:border-brand-teal-600 hover:bg-brand-teal-50 hover:shadow-md hover:scale-105"
           >
             {langLabel}
           </Link>
