@@ -98,7 +98,7 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.7 }}
-              className="text-base md:text-lg lg:text-xl leading-relaxed mb-10 text-white/90"
+              className="text-base md:text-lg lg:text-xl leading-relaxed mb-16 text-white/90"
             >
               {t.hero.description}
             </motion.p>

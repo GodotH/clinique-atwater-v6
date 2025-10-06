@@ -35,7 +35,7 @@ export default function Stats() {
       bgGradient: "from-blue-50 to-cyan-50",
       borderColor: "border-blue-200",
       cornerPosition: "top-0 right-0",
-      cornerSize: "w-24 h-24"
+      cornerSize: "w-16 h-16"
     },
     {
       value: "4500+",
@@ -45,7 +45,7 @@ export default function Stats() {
       bgGradient: "from-cyan-50 to-blue-50",
       borderColor: "border-cyan-200",
       cornerPosition: "bottom-0 left-0",
-      cornerSize: "w-28 h-28"
+      cornerSize: "w-20 h-20"
     },
     {
       value: "3",
@@ -55,7 +55,7 @@ export default function Stats() {
       bgGradient: "from-blue-50 to-indigo-50",
       borderColor: "border-blue-300",
       cornerPosition: "top-0 left-0",
-      cornerSize: "w-20 h-20"
+      cornerSize: "w-14 h-14"
     },
     {
       value: "96%",
@@ -65,7 +65,7 @@ export default function Stats() {
       bgGradient: "from-sky-50 to-blue-50",
       borderColor: "border-sky-200",
       cornerPosition: "bottom-0 right-0",
-      cornerSize: "w-32 h-32"
+      cornerSize: "w-24 h-24"
     }
   ]
 
