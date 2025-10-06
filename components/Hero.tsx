@@ -66,7 +66,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xs md:text-sm font-bold mb-8 md:mb-12 tracking-widest text-white uppercase"
+            className="text-xs md:text-sm font-bold mb-12 md:mb-16 tracking-widest text-white uppercase"
           >
             {t.hero.tagline}
           </motion.p>
