@@ -1,7 +1,7 @@
 "use client"
 
 import { useTranslations } from "../app/i18n/client"
-import { Sparkles, Zap, Medal, HeartHandshake } from "lucide-react"
+import { Sparkles, Zap, Medal, HeartHandshake, Activity, Flame, Brain } from "lucide-react"
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
@@ -90,30 +90,73 @@ export default function Services() {
             variants={containerVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-16"
+            className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-24"
           >
             {[
-              { text: t.services.factors.biomechanical, gradient: "from-purple-500 to-pink-500", bgGradient: "from-purple-50 to-pink-50", borderColor: "border-purple-200" },
-              { text: t.services.factors.biochemical, gradient: "from-blue-500 to-cyan-500", bgGradient: "from-blue-50 to-cyan-50", borderColor: "border-blue-200" },
-              { text: t.services.factors.emotional, gradient: "from-emerald-500 to-teal-500", bgGradient: "from-emerald-50 to-teal-50", borderColor: "border-emerald-200" }
-            ].map((factor, index) => (
-              <motion.div
-                key={index}
-                variants={itemVariants}
-                whileHover={{ scale: 1.05, y: -5 }}
-                className={`bg-gradient-to-br ${factor.bgGradient} border-2 ${factor.borderColor} p-6 rounded-card shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer group relative overflow-hidden`}
-              >
-                {/* Decorative gradient corner element */}
-                <div className={`absolute top-0 right-0 w-20 h-20 bg-gradient-to-br ${factor.gradient} opacity-10 rounded-bl-full`} />
+              {
+                title: "Bio-mechanical",
+                subtitle: "How your body moves and compensates",
+                icon: Activity,
+                gradient: "from-purple-500 to-pink-500",
+                bgGradient: "from-purple-50 to-pink-50",
+                borderColor: "border-purple-200"
+              },
+              {
+                title: "Bio-chemical",
+                subtitle: "Internal healing factors (inflammation, nutrition)",
+                icon: Flame,
+                gradient: "from-blue-500 to-cyan-500",
+                bgGradient: "from-blue-50 to-cyan-50",
+                borderColor: "border-blue-200"
+              },
+              {
+                title: "Emotional",
+                subtitle: "Stress patterns and lifestyle",
+                icon: Brain,
+                gradient: "from-emerald-500 to-teal-500",
+                bgGradient: "from-emerald-50 to-teal-50",
+                borderColor: "border-emerald-200"
+              }
+            ].map((factor, index) => {
+              const FactorIcon = factor.icon
+              return (
+                <motion.div
+                  key={index}
+                  variants={itemVariants}
+                  whileHover={{ scale: 1.05, y: -5 }}
+                  className={`bg-gradient-to-br ${factor.bgGradient} border-2 ${factor.borderColor} p-8 rounded-card shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer group relative overflow-hidden`}
+                >
+                  {/* Decorative gradient corner element */}
+                  <div className={`absolute top-0 right-0 w-24 h-24 bg-gradient-to-br ${factor.gradient} opacity-10 rounded-bl-full`} />
 
-                {/* Gradient overlay on hover */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${factor.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
+                  {/* Gradient overlay on hover */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${factor.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
 
-                <p className="font-semibold text-slate-700 relative z-10">
-                  {factor.text}
-                </p>
-              </motion.div>
-            ))}
+                  <div className="relative z-10 flex flex-col items-center text-center space-y-4">
+                    {/* Icon */}
+                    <motion.div
+                      whileHover={{ rotate: 360, scale: 1.1 }}
+                      transition={{ duration: 0.6 }}
+                      className="w-16 h-16 rounded-full bg-gradient-to-br from-white/50 to-white/30 backdrop-blur-sm flex items-center justify-center shadow-md"
+                    >
+                      <FactorIcon className={`w-8 h-8 bg-gradient-to-br ${factor.gradient} bg-clip-text text-transparent opacity-90`} style={{
+                        filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))'
+                      }} />
+                    </motion.div>
+
+                    {/* Title */}
+                    <h4 className={`text-xl font-bold bg-gradient-to-br ${factor.gradient} bg-clip-text text-transparent`}>
+                      {factor.title}
+                    </h4>
+
+                    {/* Subtitle */}
+                    <p className="text-sm font-medium text-slate-700 leading-snug">
+                      {factor.subtitle}
+                    </p>
+                  </div>
+                </motion.div>
+              )
+            })}
           </motion.div>
         </motion.div>
 

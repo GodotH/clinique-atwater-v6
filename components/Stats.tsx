@@ -31,33 +31,41 @@ export default function Stats() {
       value: "18+",
       label: t.benefits.stats.experienceLabel,
       delay: 0.1,
-      gradient: "from-teal-500 to-cyan-500",
-      bgGradient: "from-teal-50 to-cyan-50",
-      borderColor: "border-teal-200"
+      gradient: "from-blue-500 to-cyan-500",
+      bgGradient: "from-blue-50 to-cyan-50",
+      borderColor: "border-blue-200",
+      cornerPosition: "top-0 right-0",
+      cornerSize: "w-24 h-24"
     },
     {
       value: "4500+",
       label: t.benefits.stats.patientsLabel,
       delay: 0.2,
-      gradient: "from-brand-teal-600 to-leaf-500",
-      bgGradient: "from-teal-50 to-emerald-50",
-      borderColor: "border-teal-200"
+      gradient: "from-cyan-500 to-blue-400",
+      bgGradient: "from-cyan-50 to-blue-50",
+      borderColor: "border-cyan-200",
+      cornerPosition: "bottom-0 left-0",
+      cornerSize: "w-28 h-28"
     },
     {
       value: "3",
       label: t.benefits.stats.approachesLabel,
       delay: 0.3,
-      gradient: "from-blue-500 to-indigo-500",
+      gradient: "from-blue-600 to-indigo-500",
       bgGradient: "from-blue-50 to-indigo-50",
-      borderColor: "border-blue-200"
+      borderColor: "border-blue-300",
+      cornerPosition: "top-0 left-0",
+      cornerSize: "w-20 h-20"
     },
     {
       value: "96%",
       label: t.benefits.stats.satisfactionLabel,
       delay: 0.4,
-      gradient: "from-emerald-500 to-teal-500",
-      bgGradient: "from-emerald-50 to-teal-50",
-      borderColor: "border-emerald-200"
+      gradient: "from-sky-500 to-blue-500",
+      bgGradient: "from-sky-50 to-blue-50",
+      borderColor: "border-sky-200",
+      cornerPosition: "bottom-0 right-0",
+      cornerSize: "w-32 h-32"
     }
   ]
 
@@ -89,21 +97,32 @@ export default function Stats() {
               whileHover={{
                 scale: 1.05,
                 y: -4,
-                transition: { duration: 0.3 }
+                rotate: [0, -1, 1, 0],
+                transition: { duration: 0.4 }
               }}
               className="relative group"
             >
               <div className={`bg-gradient-to-br ${stat.bgGradient} border-2 ${stat.borderColor} rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 group-hover:border-opacity-60 relative overflow-hidden`}>
-                {/* Decorative gradient corner element */}
-                <div className={`absolute top-0 right-0 w-24 h-24 bg-gradient-to-br ${stat.gradient} opacity-10 rounded-bl-full`} />
+                {/* Decorative gradient corner element - varied positions */}
+                <div className={`absolute ${stat.cornerPosition} ${stat.cornerSize} bg-gradient-to-br ${stat.gradient} opacity-10 ${stat.cornerPosition.includes('right') ? 'rounded-bl-full' : stat.cornerPosition.includes('bottom') ? 'rounded-tr-full' : 'rounded-br-full'}`} />
 
-                {/* Gradient overlay on hover */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
+                {/* Gradient overlay on hover - animated */}
+                <motion.div
+                  className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
+                  whileHover={{
+                    opacity: [0, 0.05, 0.08, 0.05],
+                    transition: { duration: 1, repeat: Infinity }
+                  }}
+                />
 
                 <div className="relative z-10 text-center">
-                  <div className={`text-5xl md:text-6xl font-bold mb-3 bg-gradient-to-br ${stat.gradient} bg-clip-text text-transparent`}>
+                  <motion.div
+                    className={`text-5xl md:text-6xl font-bold mb-3 bg-gradient-to-br ${stat.gradient} bg-clip-text text-transparent`}
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                  >
                     {stat.value}
-                  </div>
+                  </motion.div>
                   <div className="text-sm md:text-base font-semibold text-slate-700">
                     {stat.label}
                   </div>
