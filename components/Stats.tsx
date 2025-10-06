@@ -27,10 +27,38 @@ export default function Stats() {
   }, [])
 
   const stats = [
-    { value: "18+", label: t.benefits.stats.experienceLabel, delay: 0.1 },
-    { value: "4500+", label: t.benefits.stats.patientsLabel, delay: 0.2 },
-    { value: "3", label: t.benefits.stats.approachesLabel, delay: 0.3 },
-    { value: "96%", label: t.benefits.stats.satisfactionLabel, delay: 0.4 }
+    {
+      value: "18+",
+      label: t.benefits.stats.experienceLabel,
+      delay: 0.1,
+      gradient: "from-teal-500 to-cyan-500",
+      bgGradient: "from-teal-50 to-cyan-50",
+      borderColor: "border-teal-200"
+    },
+    {
+      value: "4500+",
+      label: t.benefits.stats.patientsLabel,
+      delay: 0.2,
+      gradient: "from-brand-teal-600 to-leaf-500",
+      bgGradient: "from-teal-50 to-emerald-50",
+      borderColor: "border-teal-200"
+    },
+    {
+      value: "3",
+      label: t.benefits.stats.approachesLabel,
+      delay: 0.3,
+      gradient: "from-blue-500 to-indigo-500",
+      bgGradient: "from-blue-50 to-indigo-50",
+      borderColor: "border-blue-200"
+    },
+    {
+      value: "96%",
+      label: t.benefits.stats.satisfactionLabel,
+      delay: 0.4,
+      gradient: "from-emerald-500 to-teal-500",
+      bgGradient: "from-emerald-50 to-teal-50",
+      borderColor: "border-emerald-200"
+    }
   ]
 
   return (
@@ -59,24 +87,24 @@ export default function Stats() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: stat.delay }}
               whileHover={{
-                scale: 1.08,
-                y: -8,
+                scale: 1.05,
+                y: -4,
                 transition: { duration: 0.3 }
               }}
               className="relative group"
-              style={{
-                transform: `translate(${mousePosition.x * (index + 1) * 0.1}px, ${mousePosition.y * (index + 1) * 0.1}px)`
-              }}
             >
-              <div className="bg-white border-2 border-slate-200 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group-hover:border-brand-teal-600 relative overflow-hidden">
-                {/* Gradient overlay on hover */}
-                <div className="absolute inset-0 bg-gradient-to-br from-brand-teal-600/5 to-leaf-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className={`bg-gradient-to-br ${stat.bgGradient} border-2 ${stat.borderColor} rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 group-hover:border-opacity-60 relative overflow-hidden`}>
+                {/* Decorative gradient corner element */}
+                <div className={`absolute top-0 right-0 w-24 h-24 bg-gradient-to-br ${stat.gradient} opacity-10 rounded-bl-full`} />
 
-                <div className="relative z-10">
-                  <div className="text-5xl md:text-6xl font-bold mb-3 bg-gradient-to-br from-brand-teal-600 to-leaf-500 bg-clip-text text-transparent group-hover:scale-110 transition-transform">
+                {/* Gradient overlay on hover */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
+
+                <div className="relative z-10 text-center">
+                  <div className={`text-5xl md:text-6xl font-bold mb-3 bg-gradient-to-br ${stat.gradient} bg-clip-text text-transparent`}>
                     {stat.value}
                   </div>
-                  <div className="text-sm md:text-base font-semibold text-slate-700 group-hover:text-brand-teal-600 transition-colors">
+                  <div className="text-sm md:text-base font-semibold text-slate-700">
                     {stat.label}
                   </div>
                 </div>

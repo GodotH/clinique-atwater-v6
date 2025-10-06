@@ -93,18 +93,24 @@ export default function Services() {
             className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-16"
           >
             {[
-              t.services.factors.biomechanical,
-              t.services.factors.biochemical,
-              t.services.factors.emotional
+              { text: t.services.factors.biomechanical, gradient: "from-purple-500 to-pink-500", bgGradient: "from-purple-50 to-pink-50", borderColor: "border-purple-200" },
+              { text: t.services.factors.biochemical, gradient: "from-blue-500 to-cyan-500", bgGradient: "from-blue-50 to-cyan-50", borderColor: "border-blue-200" },
+              { text: t.services.factors.emotional, gradient: "from-emerald-500 to-teal-500", bgGradient: "from-emerald-50 to-teal-50", borderColor: "border-emerald-200" }
             ].map((factor, index) => (
               <motion.div
                 key={index}
                 variants={itemVariants}
                 whileHover={{ scale: 1.05, y: -5 }}
-                className="bg-white border-2 border-slate-200 p-6 rounded-card shadow-sm hover:shadow-lg hover:border-brand-teal-600/50 transition-all duration-300 cursor-pointer group"
+                className={`bg-gradient-to-br ${factor.bgGradient} border-2 ${factor.borderColor} p-6 rounded-card shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer group relative overflow-hidden`}
               >
-                <p className="font-semibold text-slate-700 group-hover:text-brand-teal-600 transition-colors">
-                  {factor}
+                {/* Decorative gradient corner element */}
+                <div className={`absolute top-0 right-0 w-20 h-20 bg-gradient-to-br ${factor.gradient} opacity-10 rounded-bl-full`} />
+
+                {/* Gradient overlay on hover */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${factor.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
+
+                <p className="font-semibold text-slate-700 relative z-10">
+                  {factor.text}
                 </p>
               </motion.div>
             ))}
