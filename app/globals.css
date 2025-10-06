@@ -295,4 +295,66 @@
   .bg-pos-100 {
     background-position: 100% 50%;
   }
+
+  /* =========================================
+     DROP-IN HERO REFINEMENTS (no new classes)
+     Updates ONLY `.hero-section` and `.hero-overlay`
+     ========================================= */
+
+  .hero-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 92vh;
+    background-image: image-set(
+      url('/hero_dr_tanguay1_desktop.webp') type('image/webp') 1x,
+      url('/hero_dr_tanguay1_desktop.png') type('image/png') 1x
+    );
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* Focus subjects on the right; space for copy on the left */
+    background-position: 72% 54%;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(
+      100deg,
+      rgba(14,27,42,0.82) 0%,
+      rgba(14,27,42,0.58) 20%,
+      rgba(14,27,42,0.22) 46%,
+      rgba(14,27,42,0.00) 70%
+    );
+  }
+
+  /* Responsive adjustments only on existing selectors */
+  @media (max-width: 640px) {
+    .hero-section {
+      min-height: 88vh;
+      background-image: image-set(
+        url('/hero_dr_tanguay1_mobile.webp') type('image/webp') 1x,
+        url('/hero_dr_tanguay1_mobile.png') type('image/png') 1x
+      );
+      background-position: 60% 64%;
+    }
+    .hero-overlay {
+      background: linear-gradient(
+        115deg,
+        rgba(14,27,42,0.88) 0%,
+        rgba(14,27,42,0.55) 36%,
+        rgba(14,27,42,0.15) 70%,
+        rgba(14,27,42,0.00) 86%
+      );
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .hero-section { background-position: 68% 56%; }
+  }
+
+  @media (min-width: 1440px) {
+    .hero-section { background-position: 74% 52%; }
+  }
 }
