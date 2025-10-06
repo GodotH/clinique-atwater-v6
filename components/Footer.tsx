@@ -4,7 +4,7 @@ import Link from "next/link"
 import { useTranslations } from "../app/i18n/client"
 import { useParams } from "next/navigation"
 import { Phone, Mail, MapPin } from "lucide-react"
-import CallNowButton from "./CallNowButton"
+import { motion } from "framer-motion"
 
 export default function Footer() {
   const t = useTranslations()
@@ -141,7 +141,20 @@ export default function Footer() {
             <p className="text-white/70 mb-6 text-sm leading-relaxed">
               Book your consultation today and begin your journey to pain-free living.
             </p>
-            <CallNowButton />
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
+              <Link
+                href={`/${currentLang}#contact`}
+                className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-gradient-to-r from-brand-teal-600 via-leaf-500 to-brand-teal-600 bg-size-200 bg-pos-0 hover:bg-pos-100 text-white font-bold rounded-xl transition-all duration-500 shadow-xl hover:shadow-2xl hover:shadow-brand-teal-500/50 text-base relative overflow-hidden group w-full md:w-auto"
+              >
+                <span className="relative z-10">Book Your Consultation</span>
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
+                  initial={{ x: '-100%' }}
+                  whileHover={{ x: '100%' }}
+                  transition={{ duration: 0.6 }}
+                />
+              </Link>
+            </motion.div>
           </div>
         </div>
 

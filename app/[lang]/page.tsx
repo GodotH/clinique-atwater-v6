@@ -1,5 +1,6 @@
 import Header from "../../components/Header"
 import Hero from "../../components/Hero"
+import Stats from "../../components/Stats"
 import Problems from "../../components/Problems"
 import Services from "../../components/Services"
 import Process from "../../components/Process"
@@ -15,6 +16,7 @@ export default function HomePage({ params }: { params: { lang: string } }) {
     <div className="min-h-screen">
       <Header />
       <Hero />
+      <Stats />
       <Problems />
       <Services />
       <Process />

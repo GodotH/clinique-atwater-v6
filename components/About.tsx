@@ -1,10 +1,15 @@
 "use client"
 
+import Image from "next/image"
+import Link from "next/link"
 import { useTranslations } from "../app/i18n/client"
+import { useParams } from "next/navigation"
 import { Award, Users, Target, Heart } from "lucide-react"
 
 export default function About() {
   const t = useTranslations()
+  const params = useParams()
+  const currentLang = params?.lang as string
 
   const certifications = [
     "ICAK - International College of Applied Kinesiology",
@@ -47,16 +52,20 @@ export default function About() {
 
           {/* Image/Stats Side */}
           <div>
-            {/* Doctor Image Placeholder */}
-            <div className="bg-mist-50 border border-slate-200 rounded-card p-8 mb-8">
-              <div className="aspect-square bg-gradient-to-br from-brand-teal-600/10 to-leaf-500/10 rounded-xl flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-32 h-32 bg-white border-4 border-brand-teal-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                    <Users className="w-16 h-16 text-brand-teal-600" />
-                  </div>
-                  <p className="text-ink-900 font-semibold text-lg">Dr. Simon Tanguay</p>
-                  <p className="text-slate-600">Chiropractor</p>
-                </div>
+            {/* Doctor Image */}
+            <div className="bg-gradient-to-br from-brand-teal-600/5 to-leaf-500/5 border-2 border-brand-teal-600/20 rounded-card p-8 mb-8 shadow-lg">
+              <div className="aspect-square relative rounded-xl overflow-hidden">
+                <Image
+                  src="/images/DrSimon2.jpg"
+                  alt="Dr. Simon Tanguay - Chiropractor"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
+              <div className="text-center mt-6">
+                <p className="text-ink-900 font-bold text-2xl mb-1">Dr. Simon Tanguay</p>
+                <p className="text-brand-teal-600 font-semibold text-lg">Chiropractor</p>
               </div>
             </div>
 
@@ -85,14 +94,26 @@ export default function About() {
           </h3>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {t.firstVisit.items.map((item, index) => (
-              <div key={index} className="flex items-start space-x-4">
-                <div className="w-10 h-10 bg-brand-teal-600 text-white rounded-full flex items-center justify-center font-semibold flex-shrink-0 mt-1 shadow-sm">
-                  {index + 1}
+            {t.firstVisit.items.map((item, index) => {
+              // First two boxes link to contact form
+              const isClickable = index < 2
+              const content = (
+                <div className={`flex items-start space-x-4 ${isClickable ? 'cursor-pointer group' : ''}`}>
+                  <div className={`w-10 h-10 bg-brand-teal-600 text-white rounded-full flex items-center justify-center font-semibold flex-shrink-0 mt-1 shadow-sm ${isClickable ? 'group-hover:bg-leaf-500 transition-colors' : ''}`}>
+                    {index + 1}
+                  </div>
+                  <p className={`text-slate-600 leading-relaxed text-lg ${isClickable ? 'group-hover:text-brand-teal-600 transition-colors' : ''}`}>{item}</p>
                 </div>
-                <p className="text-slate-600 leading-relaxed text-lg">{item}</p>
-              </div>
-            ))}
+              )
+
+              return isClickable ? (
+                <Link key={index} href={`/${currentLang}#contact`}>
+                  {content}
+                </Link>
+              ) : (
+                <div key={index}>{content}</div>
+              )
+            })}
           </div>
         </div>
       </div>

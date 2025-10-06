@@ -1,7 +1,7 @@
 "use client"
 
 import { useTranslations } from "../app/i18n/client"
-import { Stethoscope, Activity, Trophy, Heart } from "lucide-react"
+import { Sparkles, Zap, Medal, HeartHandshake } from "lucide-react"
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
@@ -13,25 +13,25 @@ export default function Services() {
 
   const services = [
     {
-      icon: Stethoscope,
+      icon: Sparkles,
       title: t.services.chiropractic.title,
       description: t.services.chiropractic.description,
       benefits: t.services.chiropractic.benefits,
     },
     {
-      icon: Activity,
+      icon: Zap,
       title: t.services.kinesiology.title,
       description: t.services.kinesiology.description,
       benefits: t.services.kinesiology.benefits,
     },
     {
-      icon: Trophy,
+      icon: Medal,
       title: t.services.sports.title,
       description: t.services.sports.description,
       benefits: t.services.sports.benefits,
     },
     {
-      icon: Heart,
+      icon: HeartHandshake,
       title: t.services.pain.title,
       description: t.services.pain.description,
       benefits: t.services.pain.benefits,

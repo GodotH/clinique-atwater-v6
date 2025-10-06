@@ -2,12 +2,15 @@
 
 import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
+import Link from "next/link"
 import { useTranslations } from "../app/i18n/client"
-import CallNowButton from "./CallNowButton"
+import { useParams } from "next/navigation"
 import { motion, useScroll, useTransform, useSpring } from "framer-motion"
 
 export default function Hero() {
   const t = useTranslations()
+  const params = useParams()
+  const currentLang = params?.lang as string
   const heroRef = useRef<HTMLElement>(null)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 
@@ -45,14 +48,14 @@ export default function Hero() {
           fill
           priority
           className="object-cover scale-110"
-          style={{ objectPosition: 'center center' }}
+          style={{ objectPosition: 'center 30%' }}
           sizes="100vw"
         />
       </motion.div>
 
-      {/* Animated gradient overlay with depth */}
-      <div className="absolute inset-0 bg-gradient-to-br from-ink-900/90 via-ink-900/80 to-brand-teal-700/75" />
-      <div className="absolute inset-0 bg-gradient-to-t from-brand-teal-600/20 via-transparent to-transparent" />
+      {/* Animated gradient overlay with depth - reduced opacity to make doctor more visible */}
+      <div className="absolute inset-0 bg-gradient-to-br from-ink-900/70 via-ink-900/60 to-brand-teal-700/55" />
+      <div className="absolute inset-0 bg-gradient-to-t from-brand-teal-600/15 via-transparent to-transparent" />
 
       {/* Floating accent elements */}
       <motion.div
@@ -117,48 +120,28 @@ export default function Hero() {
               {t.hero.description}
             </motion.p>
 
-            {/* CTA with hover effects */}
+            {/* CTA with gradient and hover effects */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.9 }}
-              className="mb-16 flex justify-center"
+              className="mb-8"
             >
-              <CallNowButton className="text-base md:text-lg px-10 md:px-12 py-3 md:py-4 shadow-2xl hover:shadow-leaf-500/50 animate-glow" />
-            </motion.div>
-
-            {/* Trust indicators with stagger */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-4xl">
-              {[
-                { value: "18+", label: t.benefits.stats.experienceLabel, delay: 1.0 },
-                { value: "4500+", label: t.benefits.stats.patientsLabel, delay: 1.1 },
-                { value: "3", label: t.benefits.stats.approachesLabel, delay: 1.2 },
-                { value: "96%", label: t.benefits.stats.satisfactionLabel, delay: 1.3 }
-              ].map((stat, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: stat.delay }}
-                  whileHover={{
-                    scale: 1.05,
-                    rotate: 1,
-                    transition: { duration: 0.2 }
-                  }}
-                  className="stat-card glass p-4 md:p-6 group cursor-pointer"
-                  style={{
-                    transform: `translate(${mousePosition.x * (index + 1) * 0.1}px, ${mousePosition.y * (index + 1) * 0.1}px)`
-                  }}
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
+                <Link
+                  href={`/${currentLang}#contact`}
+                  className="inline-flex items-center justify-center gap-3 px-12 py-5 bg-gradient-to-r from-brand-teal-600 via-leaf-500 to-brand-teal-600 bg-size-200 bg-pos-0 hover:bg-pos-100 text-white font-bold rounded-xl transition-all duration-500 shadow-2xl hover:shadow-brand-teal-500/50 text-lg relative overflow-hidden group"
                 >
-                  <div className="text-3xl md:text-4xl font-bold mb-1 text-white group-hover:scale-110 transition-transform">
-                    {stat.value}
-                  </div>
-                  <div className="text-xs md:text-sm font-medium text-white/80">
-                    {stat.label}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
+                  <span className="relative z-10">Book Your Consultation</span>
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
+                    initial={{ x: '-100%' }}
+                    whileHover={{ x: '100%' }}
+                    transition={{ duration: 0.6 }}
+                  />
+                </Link>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
       </motion.div>

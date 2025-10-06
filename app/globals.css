@@ -282,4 +282,17 @@
   .parallax-medium {
     transform: translateY(calc(var(--scroll, 0) * 0.3px));
   }
+
+  /* Gradient background animation */
+  .bg-size-200 {
+    background-size: 200% 200%;
+  }
+
+  .bg-pos-0 {
+    background-position: 0% 50%;
+  }
+
+  .bg-pos-100 {
+    background-position: 100% 50%;
+  }
 }
