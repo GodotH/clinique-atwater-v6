@@ -7,7 +7,7 @@ import { useRef, useState, useEffect } from "react"
 
 export default function Stats() {
   const t = useTranslations()
-  const ref = useRef(null)
+  const ref = useRef<HTMLElement>(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 
