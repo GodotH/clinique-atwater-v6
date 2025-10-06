@@ -1,11 +1,10 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import Image from "next/image"
 import Link from "next/link"
 import { useTranslations } from "../app/i18n/client"
 import { useParams } from "next/navigation"
-import { motion, useScroll, useTransform, useSpring } from "framer-motion"
+import { motion, useScroll, useTransform } from "framer-motion"
 
 export default function Hero() {
   const t = useTranslations()
@@ -15,9 +14,7 @@ export default function Hero() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 
   const { scrollY } = useScroll()
-  const y = useTransform(scrollY, [0, 500], [0, 150])
   const opacity = useTransform(scrollY, [0, 300], [1, 0])
-  const springY = useSpring(y, { stiffness: 100, damping: 30 })
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -40,22 +37,8 @@ export default function Hero() {
       id="hero"
       className="hero-section pt-24 pb-20 relative overflow-hidden"
     >
-      {/* Parallax background image */}
-      <motion.div style={{ y: springY }} className="absolute inset-0 w-full h-full">
-        <Image
-          src="/images/DrTanguay.png"
-          alt=""
-          fill
-          priority
-          className="object-cover scale-110"
-          style={{ objectPosition: 'center 30%' }}
-          sizes="100vw"
-        />
-      </motion.div>
-
-      {/* Animated gradient overlay with depth - reduced opacity to make doctor more visible */}
-      <div className="absolute inset-0 bg-gradient-to-br from-ink-900/70 via-ink-900/60 to-brand-teal-700/55" />
-      <div className="absolute inset-0 bg-gradient-to-t from-brand-teal-600/15 via-transparent to-transparent" />
+      {/* Gradient overlay - now using CSS background from globals.css */}
+      <div className="hero-overlay" />
 
       {/* Floating accent elements */}
       <motion.div
