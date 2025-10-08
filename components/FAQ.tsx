@@ -49,13 +49,13 @@ export default function FAQ() {
 
               <div
                 className={`faq-answer overflow-hidden transition-all duration-300 ease-in-out ${
-                  openItems.includes(index) ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                  openItems.includes(index) ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
                 }`}
               >
                 <div className="px-8 pb-8 pt-4 border-t border-slate-200">
-                  <p className="text-slate-600 leading-relaxed text-base">
+                  <div className="text-slate-600 leading-relaxed text-base whitespace-pre-line">
                     {item.answer}
-                  </p>
+                  </div>
                 </div>
               </div>
             </div>
