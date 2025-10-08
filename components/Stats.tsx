@@ -28,44 +28,40 @@ export default function Stats() {
 
   const stats = [
     {
-      value: "18+",
+      number: "18",
+      suffix: "+",
       label: t.benefits.stats.experienceLabel,
       delay: 0.1,
       gradient: "from-blue-500 to-cyan-500",
       bgGradient: "from-blue-50 to-cyan-50",
-      borderColor: "border-blue-200",
-      cornerPosition: "top-0 right-0",
-      cornerSize: "w-16 h-16"
+      borderColor: "border-blue-200"
     },
     {
-      value: "4500+",
+      number: "4500",
+      suffix: "+",
       label: t.benefits.stats.patientsLabel,
       delay: 0.2,
       gradient: "from-cyan-500 to-blue-400",
       bgGradient: "from-cyan-50 to-blue-50",
-      borderColor: "border-cyan-200",
-      cornerPosition: "bottom-0 left-0",
-      cornerSize: "w-20 h-20"
+      borderColor: "border-cyan-200"
     },
     {
-      value: "3",
+      number: "3",
+      suffix: "",
       label: t.benefits.stats.approachesLabel,
       delay: 0.3,
       gradient: "from-blue-600 to-indigo-500",
       bgGradient: "from-blue-50 to-indigo-50",
-      borderColor: "border-blue-300",
-      cornerPosition: "top-0 left-0",
-      cornerSize: "w-14 h-14"
+      borderColor: "border-blue-300"
     },
     {
-      value: "96%",
+      number: "96",
+      suffix: "%",
       label: t.benefits.stats.satisfactionLabel,
       delay: 0.4,
       gradient: "from-sky-500 to-blue-500",
       bgGradient: "from-sky-50 to-blue-50",
-      borderColor: "border-sky-200",
-      cornerPosition: "bottom-0 right-0",
-      cornerSize: "w-24 h-24"
+      borderColor: "border-sky-200"
     }
   ]
 
@@ -103,9 +99,6 @@ export default function Stats() {
               className="relative group"
             >
               <div className={`bg-gradient-to-br ${stat.bgGradient} border-2 ${stat.borderColor} rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 group-hover:border-opacity-60 relative overflow-hidden`}>
-                {/* Decorative gradient corner element - varied positions */}
-                <div className={`absolute ${stat.cornerPosition} ${stat.cornerSize} bg-gradient-to-br ${stat.gradient} opacity-10 ${stat.cornerPosition.includes('right') ? 'rounded-bl-full' : stat.cornerPosition.includes('bottom') ? 'rounded-tr-full' : 'rounded-br-full'}`} />
-
                 {/* Gradient overlay on hover - animated */}
                 <motion.div
                   className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
@@ -117,11 +110,18 @@ export default function Stats() {
 
                 <div className="relative z-10 text-center">
                   <motion.div
-                    className={`text-5xl md:text-6xl font-bold mb-3 bg-gradient-to-br ${stat.gradient} bg-clip-text text-transparent`}
+                    className="flex items-center justify-center mb-3"
                     whileHover={{ scale: 1.1 }}
                     transition={{ type: "spring", stiffness: 300 }}
                   >
-                    {stat.value}
+                    <span className={`text-5xl md:text-6xl font-bold bg-gradient-to-br ${stat.gradient} bg-clip-text text-transparent`}>
+                      {stat.number}
+                    </span>
+                    {stat.suffix && (
+                      <span className={`text-5xl md:text-6xl font-bold bg-gradient-to-br ${stat.gradient} bg-clip-text text-transparent`}>
+                        {stat.suffix}
+                      </span>
+                    )}
                   </motion.div>
                   <div className="text-sm md:text-base font-semibold text-slate-700">
                     {stat.label}

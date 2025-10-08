@@ -137,11 +137,9 @@ export default function Services() {
                     <motion.div
                       whileHover={{ rotate: 360, scale: 1.1 }}
                       transition={{ duration: 0.6 }}
-                      className="w-16 h-16 rounded-full bg-gradient-to-br from-white/50 to-white/30 backdrop-blur-sm flex items-center justify-center shadow-md"
+                      className={`w-16 h-16 rounded-full bg-gradient-to-br ${factor.gradient} flex items-center justify-center shadow-md`}
                     >
-                      <FactorIcon className={`w-8 h-8 bg-gradient-to-br ${factor.gradient} bg-clip-text text-transparent opacity-90`} style={{
-                        filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))'
-                      }} />
+                      <FactorIcon className="w-8 h-8 text-white" />
                     </motion.div>
 
                     {/* Title */}
