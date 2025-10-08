@@ -102,9 +102,9 @@ export default function Stats() {
               }}
               className="relative group"
             >
-              <div className={`bg-gradient-to-br ${stat.bgGradient} border-2 ${stat.borderColor} rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 group-hover:border-opacity-60 relative overflow-visible`}>
+              <div className={`bg-gradient-to-br ${stat.bgGradient} border-2 ${stat.borderColor} rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 group-hover:border-opacity-60 relative overflow-hidden`}>
                 {/* Decorative gradient corner element - varied positions */}
-                <div className={`absolute ${stat.cornerPosition} ${stat.cornerSize} bg-gradient-to-br ${stat.gradient} opacity-10 ${stat.cornerPosition.includes('right') ? 'rounded-bl-full' : stat.cornerPosition.includes('bottom') ? 'rounded-tr-full' : 'rounded-br-full'} ${stat.cornerPosition.includes('top') ? '-translate-y-1/2' : ''} ${stat.cornerPosition.includes('bottom') ? 'translate-y-1/2' : ''}`} />
+                <div className={`absolute ${stat.cornerPosition} ${stat.cornerSize} bg-gradient-to-br ${stat.gradient} opacity-10 ${stat.cornerPosition.includes('right') ? 'rounded-bl-full' : stat.cornerPosition.includes('bottom') ? 'rounded-tr-full' : 'rounded-br-full'}`} />
 
                 {/* Gradient overlay on hover - animated */}
                 <motion.div

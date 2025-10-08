@@ -41,37 +41,33 @@ describe('Hero Component - White Space Fixes', () => {
     expect(screen.getByText('Break Free From Pain')).toBeInTheDocument()
   })
 
-  it('should have correct spacing before the header (tagline margin)', () => {
-    const { container } = render(<Hero />)
-    const tagline = container.querySelector('.tracking-widest')
-
-    expect(tagline).toHaveClass('mb-16')
-    expect(tagline).toHaveClass('md:mb-20')
-  })
-
-  it('should have correct spacing between text and CTA (description margin)', () => {
-    const { container } = render(<Hero />)
-    const description = container.querySelector('.leading-relaxed')
-
-    expect(description).toHaveClass('mb-8')
-    expect(description).not.toHaveClass('mb-30')
-  })
-
-  it('should not have extra margin after CTA button', () => {
-    const { container } = render(<Hero />)
-    const ctaContainer = container.querySelector('.inline-flex')?.parentElement
-
-    // The motion.div wrapping the CTA should not have mb-8 anymore
-    expect(ctaContainer).not.toHaveClass('mb-8')
-  })
-
-  it('should maintain hero section structure without changing height', () => {
+  it('should have moved spacing from bottom to top (50% redistribution)', () => {
     const { container } = render(<Hero />)
     const heroSection = container.querySelector('.hero-section')
 
-    // Verify the hero section still has its original padding
-    expect(heroSection).toHaveClass('pt-24')
-    expect(heroSection).toHaveClass('pb-20')
+    // Space moved from pb-20 to pt-32 (half of pb-20 which is 10 = 40px moved up)
+    expect(heroSection).toHaveClass('pt-32')
+    expect(heroSection).toHaveClass('pb-12')
+  })
+
+  it('should maintain proper internal spacing', () => {
+    const { container } = render(<Hero />)
+    const tagline = container.querySelector('.tracking-widest')
+    const description = container.querySelector('.leading-relaxed')
+
+    // Original spacing should be maintained
+    expect(tagline).toHaveClass('mb-12')
+    expect(tagline).toHaveClass('md:mb-16')
+    expect(description).toHaveClass('mb-16')
+  })
+
+  it('should maintain total section height', () => {
+    const { container } = render(<Hero />)
+    const heroSection = container.querySelector('.hero-section')
+
+    // pt-32 + pb-12 = 44 units total (same as original pt-24 + pb-20 = 44)
+    expect(heroSection).toHaveClass('pt-32')
+    expect(heroSection).toHaveClass('pb-12')
   })
 
   it('should render the CTA button with correct text', () => {

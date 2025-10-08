@@ -35,7 +35,7 @@ export default function Hero() {
     <section
       ref={heroRef}
       id="hero"
-      className="hero-section pt-24 pb-20 relative overflow-hidden"
+      className="hero-section pt-32 pb-12 relative overflow-hidden"
     >
       {/* Gradient overlay - now using CSS background from globals.css */}
       <div className="hero-overlay" />
@@ -66,7 +66,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xs md:text-sm font-bold mb-16 md:mb-20 tracking-widest text-white uppercase"
+            className="text-xs md:text-sm font-bold mb-12 md:mb-16 tracking-widest text-white uppercase"
           >
             {t.hero.tagline}
           </motion.p>
@@ -98,7 +98,7 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.7 }}
-              className="text-base md:text-lg lg:text-xl leading-relaxed mb-8 text-white/90"
+              className="text-base md:text-lg lg:text-xl leading-relaxed mb-16 text-white/90"
             >
               {t.hero.description}
             </motion.p>
